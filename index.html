@@ -1,60 +1,131 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <meta charset="UTF-8">
+    <title>Chen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+    <script src="js/swiper-3.4.1.min.js"></script>
+    <style>
 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
-</head>
-
-<body>
-    <div class="app">
-        <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
-        </div>
-    </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
+    </style>
+    <script>
+        (function(win,doc){
+            function change(){
+                doc.documentElement.style.fontSize=doc.documentElement.clientWidth*20/320+'px';
+            }
+            change();
+            win.addEventListener('resize',change,false);
+        })(window,document)
+        window.onload=function(){
+            new Swiper('.swiper-container',{
+                loop:true,
+                speed:1500,
+                autoplay:800,
+                autoplayDisableOnInteraction : false,
+                slidesPerView: 1,
+                centeredSlides: true,
+            });
+        }
     </script>
-</body>
+</head>
+<body>
+<header>
+    <a href="javascript:;" class="menu">菜单</a>
+    <h1>Guokr.com</h1>
+    <a href="javascript:;" class="pc">pc</a>
+</header>
+<section>
+    <nav>
+        <ul>
+            <li><a href="javascript:;"><span></span><p></p>用户登录</a></li>
+            <li class="frame"></li>
+            <li><a href="javascript:;" class="li-a"><strong></strong><p></p>用户注册</a></li>
+        </ul>
+    </nav>
 
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide blue-slide"></div>
+            <div class="swiper-slide red-slide"></div>
+            <div class="swiper-slide orange-slide"></div>
+        </div>
+        <div class="box">祝亲朋好友:鸡年大吉,阖家欢乐</div>
+    </div>
+    <article>
+        <ul>
+            <li><a href="javascript:;">解读科学观点时,你应该知道的20个...</a></li>
+            <li><a href="javascript:;">运动出点汗,更好来判断</a></li>
+            <li><a href="javascript:;">“关掉”旧习惯，本性不再难移</a></li>
+            <li><a href="javascript:;">男女搭配，破案不累</a></li>
+            <li><a href="javascript:;">腰窝，性感无误？</a></li>
+            <li><a href="javascript:;">有7000多种语言，就有7000多个“平行...</a></li>
+            <li><a class="li-a" href="javascript:;">久坐杀精--今天，你坐多久了？</a></li>
+        </ul>
+    </article>
+    <h3>
+        热门问题
+        <a href="javascript:;"></a>
+    </h3>
+    <ul class="one">
+        <li class="active"><a href="javascript:;">科技</a></li>
+        <li><a href="javascript:;">生活</a></li>
+        <li><a href="javascript:;">人文</a></li>
+        <li><a href="javascript:;">自然</a></li>
+    </ul>
+    <dl class="one-false">
+        <dt>
+            <a class="cl-a" href="javascript:;">如果把探测器撞到彗星上会怎么样？</a>
+            <ul>
+                <li class="cl-map1"></li>
+                <li>撞上去的事情人类已经干过了。。深度撞击号(英语：Deep lmpact) 是美国国家</li>
+            </ul>
+        </dt>
+    </dl>
+    <ol class="one-two">
+        <li><a href="javascript:;">这个“肥皂放入牛奶”的效果是怎么产...</a></li>
+        <li><a href="javascript:;">制造出大于全画幅的感光元件有意义吗...</a></li>
+        <li><a href="javascript:;">磁场是运动的电场吗？</a></li>
+        <li><a class="cl-bd" href="javascript:;">什么函数能描述你的人生？</a></li>
+    </ol>
+    <h3>
+        小组热帖
+        <a href="javascript:;"></a>
+    </h3>
+    <ul class="one">
+        <li class="active"><a href="javascript:;">科技</a></li>
+        <li><a href="javascript:;">生活</a></li>
+        <li><a href="javascript:;">人文</a></li>
+        <li><a href="javascript:;">娱乐</a></li>
+    </ul>
+    <dl class="one-false">
+        <dt>
+            <a class="cl-a" href="javascript:;">史密森尼国家自然史博物馆：古脊椎...</a>
+        <ul>
+            <li class="cl-map2"></li>
+            <li>好久没逛果壳了,偶然发现了Baboon老师关于NMNH的帖子。因为去过多次,看</li>
+        </ul>
+        </dt>
+    </dl>
+    <ol class="one-two">
+        <li><a href="javascript:;">#TIL#有的母亲螳螂会用美色诱杀其...</a></li>
+        <li><a href="javascript:;">艾森彗星T-18小时：绝地翻反击！</a></li>
+        <li><a href="javascript:;">[ISON]我二，老大哥在看着你</a></li>
+        <li><a class="cl-bd" href="javascript:;">【天文每日一图】NGC 1999：...</a></li>
+    </ol>
+</section>
+<footer>
+    <menu>
+        <div><span></span><a href="javascript:;">回到顶部</a></div>
+        <ul>
+            <li><span></span><a href="javascript:;">PC版</a></li>
+            <li class="small"></li>
+            <li><strong></strong><a href="javascript:;">移动应用</a></li>
+        </ul>
+    </menu>
+</footer>
+</body>
 </html>
